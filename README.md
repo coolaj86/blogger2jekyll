@@ -23,8 +23,16 @@ Run `blogger2jekyll` on your downloaded export
 1. Follow the following:
 
         npm install -g blogger2jekyll
-        blogger2jekyll /path/to/blog-dd-mm-yyyy.xml /path/to/converted-blogger-posts
-        blogger2jekyll-server /path/to/converted-blogger-posts
+        blogger2jekyll /path/to/blog-dd-mm-yyyy.xml /path/to/posts
+        mv /path/to/posts/ /path/to/pub/posts/
+        blogger2jekyll-server 8080 /path/to/pub/ /path/to/pub/posts/
+
+Might also be like this
+
+        npm install -g blogger2jekyll
+        blogger2jekyll ~/Downloads/blog-16-06-2004.xml /tmp/public/posts/
+        ls /tmp/public/posts/
+        blogger2jekyll-server 3000 /tmp/public/ posts
 
 `blogger2jekyll` reads in posts and comments from the xml file
 (defaults to fuzzy searcing in the current directory for `blog-*.xml`)
@@ -33,12 +41,12 @@ and outputs them to the specified output folder (defaults to `blogger-posts`)
 `blogger2jekyll-server` issues fuzzy redirects if it can find a name similar to
 the one it was searching for in the directory it expected to find it in.
 
-For Example
+For Example (if the posts directory is simply `p`)
 
-    GET /normal.html -> /normal.html
-    GET /title-of-blog-may-be.html -> /title-of-blog-may-be-truncated.html
-    GET /fun-with-osx-10-8.html -> /fun-with-osx-108.html
-    GET /this-post-really-doesnt-exist -> 404'd!
+    GET /p/normal.html -> /p/normal.html
+    GET /p/title-of-blog-may-be.html -> /p/title-of-blog-may-be-truncated.html
+    GET /p/fun-with-osx-10-8.html -> /p/fun-with-osx-108.html
+    GET /p/this-post-really-doesnt-exist -> 404'd!
 
 ## Advanced Usage
 
