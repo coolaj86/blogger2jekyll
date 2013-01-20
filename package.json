@@ -1,0 +1,20 @@
+{
+  "name": "blogger2jekyll",
+  "version": "0.8.0",
+  "description": "Converts old-school blogger export file to html with yaml frontmatter for static bloggers such as ruhoh, jekyll, octopress, nanoc, etc",
+  "main": "lib/index.js",
+  "bin": {
+    "blogger2jekyll": "bin/blogger2jekyll",
+    "blogger2jekyll-fuzzy-redirect-server": "bin/fuzzy-redirect-server"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git://github.com/coolaj86/blogger2jekyll.git",
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com)",
+  "license": "BSD",
+  "dependencies": {
+    "mkdirp": "~0.3.4",
+    "xml2js": "~0.2.2"
+  }
+}
