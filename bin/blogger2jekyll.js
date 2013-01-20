@@ -25,7 +25,11 @@
     return;
   }
 
-  function eachPost(filename, contents) {
+  function eachPost(relpath, contents) {
+    var filename = relpath.split('/').pop()
+      ;
+    
+    // write the files out flat, the static compiler with write out the folders
     fs.writeFile(path.join(folder, filename), contents, 'utf8');
   }
 
