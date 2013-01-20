@@ -1,6 +1,6 @@
 {
   "name": "blogger2jekyll",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Converts old-school blogger export file to html with yaml frontmatter for static bloggers such as ruhoh, jekyll, octopress, nanoc, etc",
   "main": "lib/index.js",
   "bin": {
