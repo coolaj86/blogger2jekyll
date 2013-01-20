@@ -38,7 +38,13 @@ Might also be like this
 (defaults to fuzzy searcing in the current directory for `blog-*.xml`)
 and outputs them to the specified output folder (defaults to `blogger-posts`)
 
-`blogger2jekyll-server` issues fuzzy redirects if it can find a name similar to
+If your static site generator supports the `permalink` front-matter directive,
+all is well. Fear no more!
+
+Just to be sure, check <with http://validator.w3.org/checklink>
+
+However, if it does not, you may wish to use `blogger2jekyll-server`, which
+uses fuzzy redirects if it can find a name similar to
 the one it was searching for in the directory it expected to find it in.
 
 For Example (if the posts directory is simply `p`)
