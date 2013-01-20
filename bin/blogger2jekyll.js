@@ -30,7 +30,7 @@
   }
 
   function parseFile(err, data) {
-    b2j.parse(data, eachPost);
+    b2j.parse(data, eachPost, { prefix: '/articles' });
   }
   
   function readFile(err) {
