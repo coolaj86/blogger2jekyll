@@ -14,6 +14,9 @@
 
   app.use(connect.static(directory));
   app.use(connect.directory(directory));
+
+  // it's important that your app have connect.query() in the stack before b2j
+  app.use(connect.query());
   app.use(b2j(directory, subdir));
   server = app.listen(port, function () {
     console.log(directory, subdir);

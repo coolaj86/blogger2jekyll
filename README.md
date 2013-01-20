@@ -38,12 +38,13 @@ Might also be like this
 (defaults to fuzzy searcing in the current directory for `blog-*.xml`)
 and outputs them to the specified output folder (defaults to `blogger-posts`)
 
-If your static site generator supports the `permalink` front-matter directive,
-all is well. Fear no more!
+If you don't care about handling blogger redirects properly, and your static site generator supports the `permalink` front-matter directive, you're done.
 
 Just to be sure, check <with http://validator.w3.org/checklink>
 
-However, if it does not, you may wish to use `blogger2jekyll-server`, which
+However, if you're going to handle proper 301 redirects and or your static generator
+does not handle the permalink directive, you'll probably wanna glance over the code
+in `blogger2jekyll-server` (or even use it directly), which
 uses fuzzy redirects if it can find a name similar to
 the one it was searching for in the directory it expected to find it in.
 
