@@ -8,7 +8,7 @@
     , app = connect.createServer()
     , port = process.argv[2] || 3000
     , directory = process.argv[3] || '.'
-    , subdir = process.argv[4] || 'blogger-posts'
+    , subdir = process.argv[4] || ''
     , server
     ;
 
