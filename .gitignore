@@ -2,3 +2,4 @@ node_modules
 blogger-posts
 blog-*.xml
 public
+.*.sw*
