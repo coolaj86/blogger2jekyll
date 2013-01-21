@@ -4,8 +4,8 @@
   "description": "Converts old-school blogger export file to html with yaml frontmatter for static bloggers such as ruhoh, jekyll, octopress, nanoc, etc",
   "main": "lib/index.js",
   "bin": {
-    "blogger2jekyll": "bin/blogger2jekyll",
-    "blogger2jekyll-fuzzy-redirect-server": "bin/fuzzy-redirect-server"
+    "blogger2jekyll": "bin/blogger2jekyll.js",
+    "blogger2jekyll-fuzzy-redirect-server": "bin/fuzzy-redirect-server.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
