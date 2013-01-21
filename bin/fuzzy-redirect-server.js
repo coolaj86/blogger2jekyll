@@ -11,7 +11,8 @@
     , subdir = process.argv[4] || ''
     , server
     ;
-
+    
+  app.use(connect.favicon());
   app.use(connect.static(directory));
   app.use(connect.directory(directory));
 
