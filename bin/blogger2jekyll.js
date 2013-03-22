@@ -30,7 +30,7 @@
       ;
     
     // write the files out flat, the static compiler with write out the folders
-    fs.writeFile(path.join(folder, filename), contents, 'utf8');
+    fs.writeFileSync(path.join(folder, filename), contents, 'utf8');
   }
 
   function parseFile(err, data) {
