@@ -4,6 +4,10 @@ This tool will help you migrate from Blogger / Blogspot to any
 static site generator that uses YAML front-matter such as
 Jekyll / Octopress / Ruhoh / Nanoc.
 
+[migrate]: http://blog.coolaj86.com/articles/migrate-from-blogger-to-ruhoh-with-proper-redirects.html
+
+Also see [How to migrate from blogger to jekyll / ruhoh / octopress with proper redirects][migrate]
+
 ## Basic usage
 
 Export your blog
