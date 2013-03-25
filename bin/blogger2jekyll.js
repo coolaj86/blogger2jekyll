@@ -28,6 +28,15 @@
   function eachPost(relpath, contents) {
     var filename = relpath.split('/').pop()
       ;
+
+    var date=new RegExp(/date\:\s\"([0-9]{4}-[0-9]{2}-[0-9]{2})/)
+      ;
+
+    if ( date.test(contents) && ( contents.indexOf('published: "false"') == -1 ) ) {
+    	filename = date.exec(contents)[1] + '-' + filename;
+    } else {
+	    filename = 'DRAFT' + '-' + filename;
+    }
     
     // write the files out flat, the static compiler with write out the folders
     fs.writeFileSync(path.join(folder, filename), contents, 'utf8');
